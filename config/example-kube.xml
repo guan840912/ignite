@@ -41,6 +41,7 @@
                         instead os static IP based discovery. For information on all options refer
                         to our documentation: http://apacheignite.readme.io/docs/cluster-config
                     -->
+                    <property name="namespace" value="ignite-cluster"/>
                     <!-- Uncomment static IP finder to enable static-based discovery of initial nodes. -->
                     <!--<bean class="org.apache.ignite.spi.discovery.tcp.ipfinder.vm.TcpDiscoveryVmIpFinder">-->
                     <bean class="org.apache.ignite.spi.discovery.tcp.ipfinder.kubernetes.TcpDiscoveryKubernetesIpFinder">
