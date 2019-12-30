@@ -1,0 +1,12 @@
+<bean id="ignite.cfg" class="org.apache.ignite.configuration.IgniteConfiguration">
+    <property name="discoverySpi">
+        <bean class="org.apache.ignite.spi.discovery.tcp.TcpDiscoverySpi">
+            <property name="ipFinder">
+                <bean class="org.apache.ignite.spi.discovery.tcp.ipfinder.kubernetes.TcpDiscoveryKubernetesIpFinder">
+                    <!-- Set a project name as the namespace. -->
+                    <property name="namespace" value="ignite-cluster"/>
+                </bean>
+            </property>
+        </bean>
+    </property>
+</bean>
